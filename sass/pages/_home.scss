@@ -1,0 +1,120 @@
+.section-about {
+  background-color: $color-grey-light;
+  padding: 20rem 0;
+  margin-top: -20vh;
+
+  @include respond(tab-port) {
+    padding: 20rem 0 15rem;
+  }
+
+  @include respond(phone) {
+    padding: 20rem 0 0;
+  }
+}
+
+.section-features {
+  padding: 25rem 0 0rem;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.8),
+      rgba($color-primary-light, 0.8)
+    ),
+    url("images/section-features.jpg");
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-5deg);
+  margin-top: -6rem;
+
+  & > * {
+    transform: skewY(5deg);
+  }
+
+  @include respond(tab-land) {
+    padding: 25rem 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 20rem 0 90rem;
+  }
+
+  @include respond(phone) {
+    padding: 15rem 0 90rem;
+  }
+}
+
+.section-tours {
+  background-color: $color-grey-light;
+  padding: 20rem 0 10rem;
+  margin-top: -7rem;
+  @include respond(phone) {
+    padding: 15rem 0 5rem;
+  }
+}
+
+.section-story {
+  padding: 15rem 0;
+  position: relative;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+  @include respond(phone) {
+    padding: 5rem 0;
+  }
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-blue-dark,
+    $color-blue-light
+  );
+
+  @include respond(phone) {
+    padding: 10rem 0;
+  }
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.93) 0,
+      rgba($color-white, 0.93) 65%,
+      transparent 35%
+    ),
+    url("images/section-book.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 2rem 5rem rgba($color-black, 0.2);
+  margin: 0 13%;
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.93) 0,
+        rgba($color-white, 0.93) 58%,
+        transparent 42%
+      ),
+      url("images/section-book.jpg");
+  }
+
+  @include respond(phone) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-white, 0.93) 0,
+        rgba($color-white, 0.93) 50%,
+        rgba($color-white, 0.93) 50%
+      ),
+      url("images/section-book.jpg");
+  }
+}

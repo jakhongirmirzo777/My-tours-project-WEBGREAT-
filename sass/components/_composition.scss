@@ -1,0 +1,66 @@
+.composition {
+  position: relative;
+
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.3rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 5;
+    transition: all 0.2s;
+    outline-offset: 1.7rem;
+    // Offset property
+    @include respond(tab-port) {
+      width: 33%;
+      position: relative;
+      float: left;
+      box-shadow: 0 1.3rem 3rem rgba($color-black, 0.2);
+    }
+
+    &--p1 {
+      left: 0;
+      top: 1rem;
+
+      @include respond(tab-port) {
+        left: 0;
+        top: 1rem;
+        transform: scale(1.1);
+      }
+    }
+
+    &--p2 {
+      right: 4rem;
+      top: 5rem;
+
+      @include respond(tab-port) {
+        left: 0;
+        top: 3rem;
+        transform: scale(1.3);
+        z-index: 9;
+      }
+    }
+
+    &--p3 {
+      left: 7rem;
+      top: 11rem;
+
+      @include respond(tab-port) {
+        left: -1rem;
+        top: 1rem;
+        transform: scale(1.1);
+      }
+    }
+
+    &:hover {
+      //  This outline wouldn't work without offset property
+      outline: 1.3rem solid $color-subtle-green;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 10;
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+  }
+}
